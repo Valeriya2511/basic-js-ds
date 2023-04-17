@@ -19,11 +19,11 @@ class Queue {
     this.firstEl;
     this.lastEl;
   }
-
+  
   getUnderlyingList() {
     return this.firstEl;
   }
-
+  
   enqueue(value) {
     const newNode = new ListNode(value);
     if (!this.firstEl) {
@@ -34,12 +34,12 @@ class Queue {
     }
     this.lastEl = newNode;
   }
-
+  
   dequeue() {
     let retFirst = this.firstEl;
     this.firstEl = retFirst.next;
     return retFirst.value
-}
+  }
 }
 
 module.exports = {
